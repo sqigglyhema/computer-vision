@@ -1,0 +1,25 @@
+import cv2
+
+path = r"C:\Users\itsme\Downloads\cat.jpeg"
+	
+image = cv2.imread(path)
+	
+window_name = 'Image'
+
+center_coordinates = (120, 100)
+
+axesLength = (100, 50)
+
+angle = 0
+
+startAngle = 0
+
+endAngle = 360
+
+color = (0, 0, 255)
+thickness = 5
+
+image = cv2.ellipse(image, center_coordinates, axesLength,
+		angle, startAngle, endAngle, color, thickness)
+
+cv2.imshow(window_name, image)
